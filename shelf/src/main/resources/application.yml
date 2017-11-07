@@ -1,7 +1,19 @@
+spring:
+  application:
+    name: shelf
+  profiles: shelf
+server:
+  port: 8000
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
 ---
 spring:
   application:
-    name: supermarket
+    name: shelf
   profiles: shelf1
 server:
   port: 8001
@@ -10,11 +22,11 @@ eureka:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://localhost:8002/eureka/,http://localhost:8003/eureka/
+      defaultZone: http://localhost:8001/eureka/,http://localhost:8003/eureka/
 ---
 spring:
   application:
-    name: supermarket
+    name: shelf
   profiles: shelf2
 server:
   port: 8002
@@ -27,7 +39,7 @@ eureka:
 ---
 spring:
   application:
-    name: supermarket
+    name: shelf
   profiles: shelf3
 server:
   port: 8003

@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="cashier" />
         <module name="shelf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cashier" target="1.8" />
       <module name="shelf" target="1.8" />
       <module name="Supermarket" target="1.8" />
     </bytecodeTargetLevel>
